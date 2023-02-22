@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            div{
+                height: 100%;
+                width: 100%;
+                display: grid;
+                place-items: center;
+                background-color: #000;
+            }
+            .button-outer{
+                height: 220px;
+                width: 220px;
+                position: relative;
+                border-radius: 50%;
+            }
+            .button-outer button{
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                border: none;
+                background-color: #222;
+                color: #fff;
+                font-weight: bold;
+                font-size: 25px;
+            }
+            .button-outer span{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 100%;
+                width: 100%;
+                background: inherit;
+                border-radius: 50%;
+                z-index: -1;
+            }
+            .button-outer span:nth-child(1){
+                filter: blur(7px);
+            }
+            .button-outer span:nth-child(2){
+                filter: blur(14px);
+            }
+
+            .button-outer:hover{
+                background: linear-gradient(to top, #14ffe9, #ffeb3b, #ff00e0);
+                animation: rotate-me 1s linear infinite;
+            }
+
+            @keyframes rotate-me {
+                from{
+                    filter: hue-rotate(0deg);
+                }
+                to{
+                    filter: hue-rotate(360deg);
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div>
+            <div class="button-outer">
+                <button>HOVER ME</button>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+    </body>
+</html>

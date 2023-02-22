@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <style>
+            .container{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 10;
+            }
+            .container img{
+                margin-bottom: 40px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <img src="mickey.jpg" height="100px" alt="mickey-mouse" id="image">
+            <table>
+                <tr>
+                    <td><label for="contrast">contrast: </label></td>
+                    <td><input type="range" id="contrast" onchange="changeFilter(this, 'contrast')"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="brightness">brightness: </label></td>
+                    <td><input type="range" id="brightness" onchange="changeFilter(this, 'brightness')"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="grayscale">grayscale: </label></td>
+                    <td><input type="range" id="grayscale" onchange="changeFilter(this, 'grayscale')"></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <script>
+            const image = document.getElementById("image");
+            let contrast = 100;
+            let brightness = 100;
+            let grayscale = 0;
+
+            let changeFilter = (e, val)=>{
+                console.log(val, e.value)
+                
+                if(val==='contrast'){
+                    contrast = e.value*2;
+                }else if(val==='brightness'){
+                    brightness = e.value*2;
+                }else if(val==='grayscale'){
+                    grayscale = e.value*2;
+                }
+
+                image.style.filter = `contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayscale}%)`;
+            }
+        </script>
+
+    </body>
+</html>

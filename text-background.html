@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            div{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+
+            div video{
+                height: 100%;
+                width: 100%;
+            }
+
+            div h1{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 5em;
+                mix-blend-mode: screen;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <video loop muted autoplay>
+                <source src="video1.mp4">
+            </video>
+
+            <h1>VIDEO</h1>
+        </div>
+    </body>
+</html>
