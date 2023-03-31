@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #1E1D3C;
+  --transition: stroke-dashoffset 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  --white: #ffffff;
+  --circle-bg: rgba(43, 26, 106, 0.218);
+  --section-after: #6A38F1;
+  --box: #6352d3;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--bg);
+  font-family: 'Roboto Slab', serif;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+  padding: 0 1rem;
+}
+
+#skills {
+  padding: 4rem 0;
+  height: 100%;
+  min-height: 100vh;
+}
+
+
+.progress_container {
+  padding: 5rem 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  font-size: 2.5rem;
+  color: var(--white);
+  text-align: center;
+}
+
+
+.item-heading {
+  font-size: 2.5rem;
+}
+
+.skill {
+  position: relative;
+}
+
+svg {
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(278deg);
+  transform-origin: center;
+}
+
+circle {
+  stroke-width: 1.5rem;
+  fill: none;
+  transition: all 0.5s ease;
+}
+
+circle:nth-child(1) {
+  stroke: var(--circle-bg);
+  filter: drop-shadow(0 0 0.001rem var(--white));
+}
+
+.progress {
+  stroke: var(--stroke);
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+  stroke-dasharray: var(--stroke-dasharray);
+  stroke-dashoffset: var(--stroke-dasharray);
+  animation: progress var(--animation-time) ease-in forwards;
+  --webkit-stroke-position: inside;
+  stroke-linecap: round;
+}
+
+@keyframes progress {
+  to {
+    stroke-dashoffset: var(--stroke-dashoffset);
+  }
+}
+
+.skill .data-progress {
+  position: absolute;
+  color: var(--white);
+  font-size: 4rem;
+  font-weight: bold;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box strong {
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+}
+   </style>
+</head>
+<body>
+    <section id="skills">
+       
+        <div class="container">
+          <div class="progress_container">
+            <div class="box">
+              <div class="skill">
+                <svg>
+                  <circle cx="100" cy="100" r="70"></circle>
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="70"
+                    class="progress"
+                    data-value="90"
+                    data-stroke="#3574f7"
+                    data-time="90"
+                  ></circle>
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="70"
+                    class="progress"
+                    data-value="75"
+                    data-stroke="#6a38f1"
+                    data-time="90"
+                  ></circle>
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="70"
+                    class="progress"
+                    data-value="60"
+                    data-stroke="#00c5ea"
+                    data-time="90"
+                  ></circle>
+                </svg>
+                <span class="data-progress" data-value="90"></span>
+              </div>
+              <strong>Dart</strong>
+            </div>
+            <div class="box">
+              <div class="skill">
+                <svg>
+                  <circle cx="100" cy="100" r="70"></circle>
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="70"
+                    class="progress"
+                    data-value="80"
+                    data-stroke="#6352d3"
+                    data-time="80"
+                  ></circle>
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="70"
+                    class="progress"
+                    data-value="65"
+                    data-stroke="#3574f7"
+                    data-time="80"
+                  ></circle>
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="70"
+                    class="progress"
+                    data-value="50"
+                    data-stroke="#1ba0fb"
+                    data-time="80"
+                  ></circle>
+                </svg>
+                <span class="data-progress" data-value="80"></span>
+              </div>
+              <strong>Flutter</strong>
+            </div>
+            <div class="box">
+              <div class="skill">
+                <svg>
+                  <circle cx="100" cy="100" r="70"></circle>
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="70"
+                    class="progress"
+                    data-value="60"
+                    data-stroke="#ff7741"
+                    data-time="60"
+                  ></circle>
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="70"
+                    class="progress"
+                    data-value="45"
+                    data-stroke="#c11c92"
+                    data-time="60"
+                  ></circle>
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="70"
+                    class="progress"
+                    data-value="30"
+                    data-stroke="#7201d7"
+                    data-time="60"
+                  ></circle>
+                </svg>
+                <span class="data-progress" data-value="60"></span>
+              </div>
+              <strong>Swift</strong>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+    
+    <script>
+        let progress = document.querySelectorAll('.progress');
+let progress_text = document.querySelectorAll('.data-progress');
+
+progress.forEach((pro) => {
+  let percentage = pro.getAttribute('data-value');
+  let color = pro.getAttribute('data-stroke');
+  let animateTime = pro.getAttribute('data-time');
+  let radius = pro.r.baseVal.value;
+  let circumference = radius * 2 * Math.PI;
+  let stroke = circumference - (circumference * percentage) / 100;
+  pro.style.setProperty('--stroke-dashoffset', stroke);
+  pro.style.setProperty('--stroke-dasharray', circumference);
+  pro.style.setProperty('--stroke', color);
+  pro.style.setProperty('--animation-time', `${animateTime * 100}ms`);
+})
+
+progress_text.forEach((text) => {
+  let data = text.getAttribute('data-value');
+  let progress_value = 0;
+  let progress_bar = setInterval(() => {
+    progress_value++;
+    text.innerText = `${progress_value}%`;
+    if (progress_value == data) {
+      clearInterval(progress_bar);
+    }
+  }, 100);
+})
+    </script>
+</body>
+</html>

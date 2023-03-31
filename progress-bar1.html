@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .outer{
+            height: 95vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: white;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            position: relative;
+            font-size: 30px;
+        }
+
+        .box p{
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .box::before{
+            content: "";
+            height: 55%;
+            width: 120%;
+            background-color: white;
+            position: absolute;
+            top:50%;
+            left: -10%;
+        }
+
+        .box span:nth-child(1){
+            display: inline-block;
+            height: 305px;
+            width: 310px;
+            border:10px solid;
+            border-color: transparent transparent green green;
+            position: relative;
+            z-index: -1;
+            top: -5;
+            left: -5;
+            transform: rotate(20deg);
+            border-radius: 50%;
+        }
+
+        .box span:nth-child(2){
+            display: inline-block;
+            height: 305px;
+            width: 310px;
+            border: 10px solid;
+            border-color: transparent transparent #fc8441 #fc8441;
+            position: absolute;
+            z-index: -2;
+            top: -5px;
+            left: -5;
+            border-radius: 50%;
+            transform: rotate(50deg);
+        }
+        .box span:nth-child(3){
+            display: inline-block;
+            height: 305px;
+            width: 310px;
+            border: 10px solid;
+            border-color: transparent transparent red red;
+            position: absolute;
+            z-index: -3;
+            top: -4px;
+            left: -5;
+            border-radius: 50%;
+            transform: rotate(80deg);
+        }
+        .box span:nth-child(4){
+            display: inline-block;
+            height: 305px;
+            width: 310px;
+            border: 10px solid;
+            border-color: transparent transparent lime lime;
+            position: absolute;
+            z-index: -4;
+            top: -3px;
+            left: -5;
+            border-radius: 50%;
+            transform: rotate(110deg);
+        }
+        .box span:nth-child(5){
+            display: inline-block;
+            height: 305px;
+            width: 310px;
+            border: 10px solid;
+            border-color: transparent transparent black black;
+            position: absolute;
+            z-index: -5;
+            top: 0;
+            left: -5;
+            border-radius: 50%;
+            transform: rotate(140deg);
+        }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="outer">
+        <div class="box">
+            <p>90 %</p>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+  </body>
+</html>
